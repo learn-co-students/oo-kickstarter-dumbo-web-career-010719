@@ -1,0 +1,21 @@
+require "pry"
+class Project
+attr_accessor :backers
+
+    def initialize(title)
+        @title=title
+        @backers=[]
+        # Backer.backed_projects<<self
+        
+    end
+
+    def title
+        @title
+    end
+
+    def add_backer(backer)
+        backers<<backer
+        backer.backed_projects<<self
+    end
+
+end 
